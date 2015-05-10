@@ -5,7 +5,9 @@ Markerwitz is a human-computer interface that uses pen movements over a surface 
 Installation
 ===
 - Install Python/OpenCV
+- Install [websocketd](https://github.com/joewalnes/websocketd) and make sure `websocketd` is in `PATH`
 
 Usage
 ===
 - Run `./markerwitz.sh`
+- To monitor processes: `ps axu | grep "watch\.py\|server\.py"`

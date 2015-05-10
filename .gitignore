@@ -3,3 +3,4 @@
 *.log
 env/
 .ipynb_checkpoints/
+temp.*
