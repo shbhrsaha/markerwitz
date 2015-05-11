@@ -15,10 +15,18 @@ $(document).ready(function(e){
     // receive event from the runner context
     movie.on('message:ready', function() {
 
+      /* Get coordinates from ws port (for example, if webcam is the control) */
       if(config.wsPort){
 
         screenX = 0;
         screenY = 0;
+
+        /* Go from projector screen size to page screen size */
+        function mapToScreen(x, y){
+          x = x * parseFloat($(window).width()) / config.gridX;
+          y = y * parseFloat($(window).height()) / config.gridY;
+          return {x: x, y: y};
+        }
 
         // setup websocket with callbacks
         var ws = new WebSocket('ws://localhost:' + config.wsPort);
@@ -30,12 +38,12 @@ $(document).ready(function(e){
         };
         ws.onmessage = function(event) {
           console.log('MESSAGE: ' + event.data);
-          screenX = event.data.x;
-          screenY = event.data.y;
+          //data = mapToScreen(event.data.x, event.data.y);
+          screenX = window.screenX;// data.x;
+          screenY = window.screenY;// data.y;
         };
 
       }
-
 
       /* No projector/camera attached */
       $(document).click(function(e){

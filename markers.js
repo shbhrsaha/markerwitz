@@ -32,7 +32,7 @@ function bonsaiMain(){
   function snapToPoint(x, y){
 
       if(!snap) return {x: x, y:y};
-      
+
       self.importScripts('https://raw.githubusercontent.com/ubilabs/kd-tree-javascript/master/kdTree-min.js');
 
 
