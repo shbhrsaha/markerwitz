@@ -29,6 +29,17 @@ function bonsaiMain(){
 
   stage.sendMessage("ready",{});
 
+  function mouseLoc(){
+
+    circle = new Circle(0,0, hoverRadius).stroke(lineColor, lineWidth).addTo(stage);
+
+    stage.on('message:mouseMove', function(data){
+      circle.attr{'x', data.x};
+      circle.attr{'y', data.y};
+    });
+
+  }
+
   function snapToPoint(x, y){
 
       if(!snap) return {x: x, y:y};
@@ -62,11 +73,6 @@ function bonsaiMain(){
       }
   }
 
-  function guideCircles(){
-    if(stage.circles){
-      var i = 7;
-    }
-  }
 
   function circles() {
 

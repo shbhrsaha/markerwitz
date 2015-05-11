@@ -42,6 +42,10 @@ $(document).ready(function(e){
           //data = mapToScreen(event.data.x, event.data.y);
           screenX = parseFloat(data[0]);
           screenY = parseFloat(data[1]);
+          movie.sendMessage('mouseMove', {
+            x: screenX,
+            y: screenY
+          });
         };
 
       }
