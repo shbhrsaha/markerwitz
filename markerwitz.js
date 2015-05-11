@@ -28,6 +28,13 @@ $(document).ready(function(e){
         });
       });
 
+      $(document).keypress(function(e){
+        console.log('keypress');
+        movie.sendMessage('keypress', {
+          key: String.fromCharCode(e.keyCode)
+        });
+      });
+
 
     });
 
