@@ -38,9 +38,10 @@ $(document).ready(function(e){
         };
         ws.onmessage = function(event) {
           console.log('MESSAGE: ' + event.data);
+          data = event.data.split(',');
           //data = mapToScreen(event.data.x, event.data.y);
-          screenX = window.screenX;// data.x;
-          screenY = window.screenY;// data.y;
+          screenX = parseFloat(data[0]);
+          screenY = parseFloat(data[1]);
         };
 
       }
