@@ -1,6 +1,6 @@
 # markerwitz
 
-Markerwitz is a human-computer interface that uses pen movements over a surface to drive the cursor position. Our demonstration applies Markerwitz to Sutherland's Sketchpad.
+Markerwitz is a human-computer interface that uses pen movements over a surface to drive the cursor position. Our demonstration applies Markerwitz to Sutherland's Sketchpad. This was a final project by Dale Markowitz and Shubhro Saha for COS 583 (Great Moments in Computing) at Princeton University.
 
 Installation
 ===
